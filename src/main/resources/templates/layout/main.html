@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{app.title}"></title>
+    <link th:href="@{/assets/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<!--    header    -->
+<header th:include="fragments/header :: header"></header>
+
+<!--    content    -->
+<main th:replace="${content}"></main>
+
+<!--    footer    -->
+<footer th:include="fragments/footer :: footer"></footer>
+</body>
+</html>

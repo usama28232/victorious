@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<changeSet id="00001" author="usama28232">
+    <createTable tableName="v_settings">
+        <column name="max_overs" type="int"></column>
+        <column name="on_wicket" type="int"/>
+        <column name="no_matches" type="int"></column>
+        <column name="player1_name" type="varchar(15)"></column>
+        <column name="player2_name" type="varchar(15)"></column>
+    </createTable>
+</changeSet>

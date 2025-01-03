@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<changeSet id="00002" author="usama28232">
+
+    <property name="now" value="now()" dbms="postgresql"/>
+    <property name="now" value="CURRENT_TIMESTAMP()" dbms="h2"/>
+
+    <createTable tableName="v_tourni_status">
+        <column name="t_status_id" type="int" autoIncrement="true">
+            <constraints primaryKey="true"/>
+        </column>
+        <column name="status" type="varchar(3)"></column>
+        <column name="l_status" type="varchar(15)"></column>
+        <column name="add_date" type="timestamp with time zone"></column>
+    </createTable>
+
+    <insert tableName="v_tourni_status">
+        <column name="status" value="INP"></column>
+        <column name="l_status" value="In Progress"></column>
+        <column name="add_date" value="${now}"></column>
+    </insert>
+    <insert tableName="v_tourni_status">
+        <column name="status" value="ABD"></column>
+        <column name="l_status" value="Abandoned"></column>
+        <column name="add_date" value="${now}"></column>
+    </insert>
+    <insert tableName="v_tourni_status">
+        <column name="status" value="COM"></column>
+        <column name="l_status" value="Completed"></column>
+        <column name="add_date" value="${now}"></column>
+    </insert>
+
+</changeSet>
